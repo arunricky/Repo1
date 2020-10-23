@@ -1,1 +1,1 @@
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Farunricky%2FRepo1%2Fmain%2FDeploy-VM%2FDeployVM.json%3Ftoken%3DAJVP32XBIC6ZCUL7EFU4VTC7SJBQY)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Farunricky%2FRepo1%2Fmain%2FDeploy-VM%2FDeployVM.json)
