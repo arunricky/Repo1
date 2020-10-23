@@ -3,13 +3,18 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "Hostname": {
-            "value": "" // TODO: Fill in parameter value
+            "value": "servernahihai01" // TODO: Fill in parameter value
+        },
+        "adminUsername": {
+            "value": "azlocaladmin" // TODO: Fill in parameter value
         },
         "adminPassword": {
-            "value": "" // TODO: Fill in parameter value
-        },
-        "dnsLabelPrefix": {
-            "value": "" // TODO: Fill in parameter value
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/8fe364b0-0e3e-4e07-9d6c-e1e15f57b20e/resourceGroups/rg-kv-az1/providers/Microsoft.KeyVault/vaults/kv-serverpwd"
+                },
+                "secretName": "azlocaladmin"
+            }
         }
     }
 }

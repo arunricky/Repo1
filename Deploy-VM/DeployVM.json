@@ -10,7 +10,6 @@
     },
     "adminUsername": {
       "type": "string",
-      "defaultValue": "azurelocaladmin",
       "metadata": {
         "description": "Username for the Virtual Machine."
       }
@@ -23,6 +22,7 @@
     },
     "dnsLabelPrefix": {
       "type": "string",
+      "defaultValue": "[concat('pip-',parameters('Hostname'))]",
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
@@ -190,7 +190,7 @@
     },
     {
       "type": "Microsoft.Compute/virtualMachines",
-      "apiVersion": "2018-10-01",
+      "apiVersion": "2019-12-01",
       "name": "[parameters('Hostname')]",
       "location": "[parameters('location')]",
       "dependsOn": [
