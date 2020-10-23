@@ -2,7 +2,11 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "Hostname": {
+      "resourceGroup": {
+          "type": "string"
+      },
+      
+      "Hostname": {
         "type": "string",
         "metadata": {
             "description": "Enter Server Name"
@@ -10,7 +14,6 @@
     },
     "adminUsername": {
       "type": "string",
-      "defaultValue": "azurelocaladmin",
       "metadata": {
         "description": "Username for the Virtual Machine."
       }
@@ -52,7 +55,6 @@
     },
     "DataDiskSize": {
         "type": "int",
-        "defaultValue": 512,
         "metadata": {
             "description": "Enter the size of data disk"
         }
@@ -75,8 +77,10 @@
         "description": "Location for all resources."
       }
     }
+    
   },
   "variables": {
+    
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
     "nicName": "[concat('nic-',parameters('Hostname'))]",
     "addressPrefix": "10.0.0.0/16",
