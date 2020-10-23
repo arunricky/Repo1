@@ -2,23 +2,19 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "resourceGroup": {
-            "value": ""
-        },
         "Hostname": {
-            "value": "" // TODO: Fill in parameter value
+            "value": "servernahihai01" // TODO: Fill in parameter value
         },
         "adminUsername": {
-            "value": "" // TODO: Fill in parameter value
+            "value": "azlocaladmin" // TODO: Fill in parameter value
         },
         "adminPassword": {
-            "value": "" // TODO: Fill in parameter value
-        },
-        "dnsLabelPrefix": {
-            "value": "" // TODO: Fill in parameter value
-        },
-        "DataDiskSize": {
-            "value": 0 // TODO: Fill in parameter value
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/8fe364b0-0e3e-4e07-9d6c-e1e15f57b20e/resourceGroups/rg-kv-az1/providers/Microsoft.KeyVault/vaults/kv-serverpwd"
+                },
+                "secretName": "azlocaladmin"
+            }
         }
     }
 }
